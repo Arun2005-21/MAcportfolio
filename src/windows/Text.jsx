@@ -21,8 +21,9 @@ const Text = () => {
         {image && (
           <img
             src={image}
-            alt={data.name}
+            alt={data.name || "Content image"}
             className="w-full h-44 object-cover object-center rounded-lg"
+            loading="lazy"
           />
         )}
 

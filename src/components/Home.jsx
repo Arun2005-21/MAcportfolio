@@ -1,12 +1,9 @@
-import { locations } from "#constants"
+import { locations } from "#constants";
 import clsx from "clsx";
 import { useGSAP } from "@gsap/react";
 import { Draggable } from "gsap/Draggable";
 import useWindowStore from "#store/window";
-
-
-
-import useLocationStore from "#store/Location";
+import useLocationStore from "#store/location";
 
 const projects = locations.work?.children ?? [];
 
@@ -31,8 +28,17 @@ const Home = () => {
             key={project.id}
             className={clsx("group folder", project.windowPosition)}
             onClick={() => handleOpenProjectFinder(project)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleOpenProjectFinder(project);
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label={`Open ${project.name} folder`}
           >
-            <img src="/images/folder.png" alt={project.name} />
+            <img src="/images/folder.png" alt={`${project.name} folder icon`} />
             <p>{project.name}</p>
           </li>
         ))}

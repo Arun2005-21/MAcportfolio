@@ -1,6 +1,6 @@
 import { techStack } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
-import { Check , Flag} from "lucide-react";
+import { Check, Flag } from "lucide-react";
 import WindowControls from "#components/WindowControls";
 
 const Terminal = () => {
@@ -21,40 +21,37 @@ const Terminal = () => {
         <p>Technologies</p>
     </div>
     <ul className="content">
-        {techStack.map(({ category, items}) => (
+        {techStack.map(({ category, items }) => (
             <li key={category} className="flex items-center">
-                <Check className="check" size={20}/>
+                <Check className="check" size={20} aria-hidden="true" />
                 <h3>{category}</h3>
                 <ul>
                     {items.map((item, i) => (
                         <li key={i}>
                             {item}
-                            {i < items.length-1 ? "," : ""}
-                            </li>
+                            {i < items.length - 1 ? "," : ""}
+                        </li>
                     ))}
                 </ul>
             </li>
         ))}
     </ul>
 
-
     <div className="footnote">
         <p>
-            <Check size={20}/> 5 of 5 stacks loaded successfully (100%)
+            <Check size={20} aria-hidden="true" /> 5 of 5 stacks loaded successfully (100%)
         </p>
 
         <p className="text-black">
-            <Flag size={15} fill="black" />
+            <Flag size={15} fill="black" aria-hidden="true" />
             Render time: 6ms
         </p>
     </div>
   </div>
   </>
   );
-  
 };
 
-const Terminalwindow = WindowWrapper(Terminal, "terminal");
+const TerminalWindow = WindowWrapper(Terminal, "terminal");
 
-
-export default Terminalwindow;
+export default TerminalWindow;

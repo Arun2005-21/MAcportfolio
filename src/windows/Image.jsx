@@ -15,7 +15,13 @@ const Image = () => {
       </div>
 
       <div className="preview">
-        {data.imageUrl && <img src={data.imageUrl} alt={data.name} />}
+        {data.imageUrl && (
+          <img 
+            src={data.imageUrl} 
+            alt={data.name || "Image preview"} 
+            loading="lazy"
+          />
+        )}
       </div>
     </>
   );

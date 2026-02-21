@@ -218,7 +218,7 @@ const WORK_LOCATION = {
       windowPosition: "top-[5vh] left-5",
       children: [
         {
-          id: 1,
+          id: 11,
           name: "Project Overview.txt",
           icon: "/images/txt.png",
           kind: "file",
@@ -232,7 +232,7 @@ const WORK_LOCATION = {
           ],
         },
         {
-          id: 2,
+          id: 12,
           name: "Live Demo.url",
           icon: "/images/safari.png",
           kind: "file",
@@ -241,7 +241,7 @@ const WORK_LOCATION = {
           position: "top-10 right-20",
         },
         {
-          id: 4,
+          id: 13,
           name: "Project Preview.png",
           icon: "/images/image.png",
           kind: "file",
@@ -250,7 +250,7 @@ const WORK_LOCATION = {
           imageUrl: "/images/project-1.png",
         },
         {
-          id: 5,
+          id: 14,
           name: "GitHub Repo.url",
           icon: "/images/plain.png",
           kind: "file",
@@ -271,7 +271,7 @@ const WORK_LOCATION = {
       windowPosition: "top-[20vh] left-7",
       children: [
         {
-          id: 1,
+          id: 21,
           name: "AI Career Advisor Project.txt",
           icon: "/images/txt.png",
           kind: "file",
@@ -287,7 +287,7 @@ const WORK_LOCATION = {
           ],
         },
         {
-          id: 2,
+          id: 22,
           name: "Live Demo.url",
           icon: "/images/safari.png",
           kind: "file",
@@ -296,7 +296,7 @@ const WORK_LOCATION = {
           position: "top-20 left-20",
         },
         {
-          id: 4,
+          id: 23,
           name: "career-advisor.png",
           icon: "/images/image.png",
           kind: "file",
@@ -305,7 +305,7 @@ const WORK_LOCATION = {
           imageUrl: "/images/project-2.png",
         },
         {
-          id: 5,
+          id: 24,
           name: "GitHub Repo.url",
           icon: "/images/plain.png",
           kind: "file",
@@ -326,7 +326,7 @@ const WORK_LOCATION = {
       windowPosition: "top-[33vh] left-7",
       children: [
         {
-          id: 1,
+          id: 31,
           name: "Food Delivery App Project.txt",
           icon: "/images/txt.png",
           kind: "file",
@@ -340,7 +340,7 @@ const WORK_LOCATION = {
           ],
         },
         {
-          id: 2,
+          id: 32,
           name: "Demo.url",
           icon: "/images/safari.png",
           kind: "file",
@@ -349,7 +349,7 @@ const WORK_LOCATION = {
           position: "top-10 right-20",
         },
         {
-          id: 4,
+          id: 33,
           name: "food-delivery-app.png",
           icon: "/images/image.png",
           kind: "file",
@@ -358,7 +358,7 @@ const WORK_LOCATION = {
           imageUrl: "/images/project-3.png",
         },
         {
-          id: 5,
+          id: 34,
           name: "GitHub Repo.url",
           icon: "/images/plain.png",
           kind: "file",
@@ -379,7 +379,7 @@ const ABOUT_LOCATION = {
   kind: "folder",
   children: [
     {
-      id: 2,
+      id: 41,
       name: "casual-me.png",
       icon: "/images/image.png",
       kind: "file",
@@ -388,7 +388,7 @@ const ABOUT_LOCATION = {
       imageUrl: "/images/adrian12.jpeg",
     },
     {
-      id: 4,
+      id: 42,
       name: "about-me.txt",
       icon: "/images/txt.png",
       kind: "file",
@@ -414,7 +414,7 @@ const RESUME_LOCATION = {
   kind: "folder",
   children: [
     {
-      id: 1,
+      id: 51,
       name: "Resume.pdf",
       icon: "/images/pdf.png",
       kind: "file",
@@ -431,7 +431,7 @@ const TRASH_LOCATION = {
   kind: "folder",
   children: [
     {
-      id: 1,
+      id: 61,
       name: "trash1.png",
       icon: "/images/image.png",
       kind: "file",

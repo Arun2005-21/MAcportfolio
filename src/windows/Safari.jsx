@@ -3,38 +3,50 @@ import { blogPosts } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
 import { ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Share, ShieldHalf } from "lucide-react";
 
-
 const Safari = () => {
   return (
   <>
   <div id="window-header">
     <WindowControls target="safari" />
 
-    <PanelLeft className="ml-10 icon" />
+      <button type="button" aria-label="Sidebar" className="ml-10 icon-button">
+        <PanelLeft className="icon" />
+      </button>
 
-    <div className="flex items-center gap-1 ml-5">
-      <ChevronLeft className="icon" />
-      <ChevronRight className="icon" />
-    </div>
-
-    <div className="flex-1 flex-center gap-3">
-      <ShieldHalf className="icon" />
-
-      <div className="search">
-        <Search className="icon" />
-        <input
-          type="text"
-          placeholder="Search or enter website name"
-          className="flex-1"
-        />
+      <div className="flex items-center gap-1 ml-5">
+        <button type="button" aria-label="Go back" className="icon-button">
+          <ChevronLeft className="icon" />
+        </button>
+        <button type="button" aria-label="Go forward" className="icon-button">
+          <ChevronRight className="icon" />
+        </button>
       </div>
-    </div>
 
-    <div className="flex items-center gap-5">
-      <Share className="icon" />
-      <Plus className="icon" />
-      <Copy className="icon" />
-    </div>
+      <div className="flex-1 flex-center gap-3">
+        <ShieldHalf className="icon" aria-hidden="true" />
+
+        <div className="search">
+          <Search className="icon" aria-hidden="true" />
+          <input
+            type="text"
+            placeholder="Search or enter website name"
+            className="flex-1"
+            aria-label="Search or enter website name"
+          />
+        </div>
+      </div>
+
+      <div className="flex items-center gap-5">
+        <button type="button" aria-label="Share" className="icon-button">
+          <Share className="icon" />
+        </button>
+        <button type="button" aria-label="New tab" className="icon-button">
+          <Plus className="icon" />
+        </button>
+        <button type="button" aria-label="Copy" className="icon-button">
+          <Copy className="icon" />
+        </button>
+      </div>
   </div>
 
   {/* Body */}
@@ -77,10 +89,9 @@ const Safari = () => {
       </div>
     </div>
   </div>
-</>
-
+  </>
   );
 };
 
-const SafariWindow = WindowWrapper(Safari,"safari");
+const SafariWindow = WindowWrapper(Safari, "safari");
 export default SafariWindow;

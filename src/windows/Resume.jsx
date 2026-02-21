@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { WindowControls } from "#components";
 import WindowWrapper from "#hoc/WindowWrapper";
 import { Download } from "lucide-react";
@@ -12,6 +13,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 const Resume = () => {
+  const [numPages, setNumPages] = useState(null);
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
   return (
     <>
       <div id="window-header">
@@ -23,6 +30,7 @@ const Resume = () => {
           download
           className="cursor-pointer"
           title="Download resume"
+          aria-label="Download resume"
         >
           <Download className="icon" />
         </a>
@@ -31,10 +39,19 @@ const Resume = () => {
       <div className="h-[calc(100%-60px)] overflow-y-auto p-3">
         <Document
           file="/files/resume.pdf"
+          onLoadSuccess={onDocumentLoadSuccess}
           loading={<p className="p-4">Loading resume...</p>}
           error={<p className="p-4 text-red-500">Failed to load PDF</p>}
         >
-          <Page pageNumber={1} renderTextLayer renderAnnotationLayer />
+          {numPages &&
+            Array.from(new Array(numPages), (_, index) => (
+              <Page
+                key={index}
+                pageNumber={index + 1}
+                renderTextLayer
+                renderAnnotationLayer
+              />
+            ))}
         </Document>
       </div>
     </>
@@ -42,4 +59,5 @@ const Resume = () => {
 };
 
 const ResumeWindow = WindowWrapper(Resume, "resume");
+
 export default ResumeWindow;

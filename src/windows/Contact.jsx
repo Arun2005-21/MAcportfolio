@@ -2,14 +2,11 @@ import WindowWrapper from "#hoc/WindowWrapper";
 import { socials } from "#constants";
 import { WindowControls } from "#components";
 
-
-
-
 const Contact = () => {
   return (
     <>
       <div id="window-header">
-        <WindowControls  target="contact"/>
+        <WindowControls target="contact" />
         <h2>Contact Me</h2>
       </div>
 
@@ -23,16 +20,16 @@ const Contact = () => {
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">Let's Connect</h3>
           <p className="text-sm text-gray-600">
-               Got an idea or want to build something cool in MERN + AI? I’m in.          </p>
+            Got an idea or want to build something cool in MERN + AI? I'm in.
+          </p>
           <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=arun.cpp21@gmail.com&su=Hello%20Arun&body=Hi%20Arun,%20I%20saw%20your%20portfolio!"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="text-blue-600 hover:text-blue-700 hover:underline font-mono text-sm"
->
-  arun.cpp21@gmail.com
-</a>
-
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=arun.cpp21@gmail.com&su=Hello%20Arun&body=Hi%20Arun,%20I%20saw%20your%20portfolio!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-700 hover:underline font-mono text-sm"
+          >
+            arun.cpp21@gmail.com
+          </a>
         </div>
 
         <ul className="grid grid-cols-2 gap-3">
